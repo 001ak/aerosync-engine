@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  aerosync-db:
+    image: postgis/postgis:15-3.3
+    container_name: aerosync-postgres
+    environment:
+      POSTGRES_USER: aerosync_admin
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DB: aerosync
+    ports:
+      - "5432:5432"
+    volumes:
+      - aerosync-db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  aerosync-db-data:

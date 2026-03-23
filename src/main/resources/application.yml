@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: aerosync-engine
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/aerosync
+    username: aerosync_admin
+    password: secretpassword
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate # Use 'validate' since we will use Flyway for schema creation
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        # Crucial: Tells Hibernate to use PostGIS spatial features
+#        dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
+
+  # Flyway configuration for database migrations
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
