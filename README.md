@@ -1,5 +1,8 @@
 # AeroSync Engine
+### 👥 Owners
 
+- Aman Kumar — [@001ak](https://github.com/001ak)
+- Prerna Kumari — [@prerna456](https://github.com/prernak456)
 > **A highly concurrent, multi-tenant backend engine for airport ride-sharing and dynamic passenger matching.**
 
 ## 📖 Project Overview
